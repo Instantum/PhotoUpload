@@ -4,6 +4,7 @@ from cloudinary.uploader import upload
 from cloudinary.utils import cloudinary_url
 
 app = Flask(__name__)
+os.environ['CLOUDINARY_URL']="cloudinary://418193537422982:ayEj_qE71n2sYdQWcgg3qi9YWjo@instantum"
 
 @app.route('/', methods=['GET', 'POST'])
 def upload_file():
@@ -20,5 +21,5 @@ def upload_file():
 
 if __name__ == "__main__":
     app.debug = True
-    app.config['CLOUDINARY_URL'] = "cloudinary://418193537422982:ayEj_qE71n2sYdQWcgg3qi9YWjo@instantum"
+   
     app.run()
